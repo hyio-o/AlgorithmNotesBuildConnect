@@ -14,7 +14,7 @@ typedef struct SqStack {
     ELemType data[MAXSIZE];
     int TOP;    // 表示数组地址位置；；
     SqStack() {
-        //TODO memset:: void *memset(void *str, int c, size_t n)
+        // memset:: void *memset(void *str, int c, size_t n)
         // :str -- 指向要填充的内存块。
         // c -- 要被设置的值。该值以 int 形式传 递，但是函数在填充内存块时是使用该值的无符号字符形式
         // n -- 要被设置为该值的字符数。   MAXSIZE == sizeof(data) ???❓

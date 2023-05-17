@@ -1,16 +1,15 @@
+#include <cstdio>
+
 //#include "2-入门门/数学/素数/获取素数表.cpp"
 //#include "3-功能/筛去所有i的倍数.h"
-#include <iostream>
-#include <cstdio>
-#include <string>
 //#include "2-入门门/数学/大整数运算/大整数四则运算.h"
 //#include "2-入门门/学习/数学/大整数运算/大整数试验性计算❎.h"
-#include "1-STL-标准库/1-vector.h"
+//#include "1-STL-标准库/1-vector.h"
 //#include "2-入门门/5-算法-排序/归并排序-❎.cpp"
 //#include "1-STL-标准库/2-set.h"
 //#include "1-STL-标准库/习题/areTheyEqual.h"
 //#include "1-STL-标准库/4-map.h"
-//#include "提高篇/1-数据结构/3-搜索查询/3-1-DFS.h"
+//#include "4-提高篇/1-数据结构/3-搜索查询/3-1-DFS.h"
 //#include "2-入门门/练习/B-1001-3n+1卡拉兹猜想.h"
 //#include "2-入门门/练习/B1016-部分A+B.h"
 //#include "2-入门门/练习/B1026-程序运行时间.h"
@@ -31,18 +30,14 @@
 //#include "4-提高篇/1-数据结构/4-树与二叉树/1-二叉树/9.2二叉树遍历/1102-反转二叉树-⚠️.h"
 //#include "4-提高篇/1-数据结构/4-树与二叉树/1-二叉树/B-二叉树给出先序中序构建二叉树.h"
 //#include "4-提高篇/1-数据结构/5-数组/977-有序数组的平方.h"
-#include "4-提高篇/1-数据结构/6-回溯算法/6-1组合问题/77-组合.h"
+//#include "4-提高篇/1-数据结构/6-回溯算法/6-1组合问题/77-组合.h"
 
-#include "/Users/chenzhiyu/CLionProjects/AlgorithmNotesBuilding/4-提高篇/1-数据结构/1-栈/栈定义.h"
+//#include "/Users/chenzhiyu/CLionProjects/AlgorithmNotesBuilding/4-提高篇/1-数据结构/1-栈/栈定义.h"
+//#include "8-C和指针/1-函数/1-1-递归追踪.h"
 
+#include "0-常用函数&库整理/1-常用math函数.h"
 int main() {
-    int a = 10;
-    cout << "a=" << a << endl;
+    f_fabs();
 
-    //print_hello();
-
-    system("pause");
     return 0;
-
-
 }

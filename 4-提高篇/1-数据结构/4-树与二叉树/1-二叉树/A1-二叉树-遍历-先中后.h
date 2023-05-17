@@ -29,9 +29,9 @@ void preOrder_H(BiTNode *T) {
     }
 }
 
-vector<ELemtype> preOrder_R(BiTNode *root) {
+vector<Elemtype> preOrder_R(BiTNode *root) {
     stack<BiTNode *> BiTSq;
-    vector<ELemtype> result;
+    vector<Elemtype> result;
     if (!root) return result;
     BiTSq.push(root);
     while (!BiTSq.empty()) {

@@ -9,16 +9,16 @@
 
 using namespace std;
 
-typedef int ELemtype;
+typedef int Elemtype;
 const int maxn = 1000;
 
-ELemtype pre_OrderL[] = {1, 2, 4, 3, 5, 7, 6};
-ELemtype in_OrderL[] = {2, 4, 1, 5, 7, 3, 6};
+Elemtype pre_OrderL[] = {1, 2, 4, 3, 5, 7, 6};
+Elemtype in_OrderL[] = {2, 4, 1, 5, 7, 3, 6};
 
 
 // restruct BiTNode
 typedef struct BiTNode {
-    ELemtype data;
+    Elemtype data;
     struct BiTNode *lchild, *rchild;
 } BiTNode, *BiTree;
 

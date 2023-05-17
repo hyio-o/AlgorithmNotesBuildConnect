@@ -2,9 +2,9 @@
 //#include "../A1-二叉树-遍历-先中后.h"
 //#include "../A2-二叉树-层序遍历.h"
 
-//typedef int ELemtype;
+//typedef int Elemtype;
 //const int maxn = 1000;
-//ELemtype preOrderL[maxn], inOrderL[maxn], postOrderL[maxn];
+//Elemtype preOrderL[maxn], inOrderL[maxn], postOrderL[maxn];
 
 
 /*re-construction*/

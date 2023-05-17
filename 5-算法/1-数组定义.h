@@ -12,13 +12,11 @@ using namespace std;
 typedef int Elemtype;
 const int maxn = 1000;
 
-
-
 //
-// Created by 陈至宇 on 2022/9/18.
+// Created by 陈至宇 on 2023/2/8.
 //
 
-#ifndef ALGORITHMNOTESBUILDING_HEAD_H
-#define ALGORITHMNOTESBUILDING_HEAD_H
+#ifndef ALGORITHMNOTESBUILDING_数组问题定义_H
+#define ALGORITHMNOTESBUILDING_数组问题定义_H
 
-#endif //ALGORITHMNOTESBUILDING_HEAD_H
+#endif //ALGORITHMNOTESBUILDING_数组问题定义_H
