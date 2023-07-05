@@ -1,15 +1,15 @@
 #include <cstring>
 #include <cstdio>
 
-const int maxn = 100010;
+const int MMAXN = 100010;
 struct NODE {
     char data;      //data
     int next;       //ptr
     bool flag;      //vive inOrder Linklist
-} node[maxn];
+} node[MMAXN];
 
 void sharing_linklist() {
-    for (int i = 0; i < maxn; ++i) {
+    for (int i = 0; i < MMAXN; ++i) {
         node[i].flag = false;
     }
     int s1, s2, n;      //s分别两条链表首地址

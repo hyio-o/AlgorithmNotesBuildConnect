@@ -1,3 +1,6 @@
+#ifndef ALGORITHMNOTESBUILDING_二叉树定义_H
+#define ALGORITHMNOTESBUILDING_二叉树定义_H
+
 #include <cstdio>
 #include <cstdlib>
 #include <cstring>
@@ -7,10 +10,11 @@
 #include <queue>
 #include <string>
 
+#define MMAXN 1000
+
 using namespace std;
 
 typedef int Elemtype;
-const int maxn = 1000;
 
 Elemtype pre_OrderL[] = {1, 2, 4, 3, 5, 7, 6};
 Elemtype in_OrderL[] = {2, 4, 1, 5, 7, 3, 6};
@@ -26,7 +30,7 @@ typedef struct BiTNode {
 // stack define
 //
 typedef struct SqStack {
-    BiTNode *data[maxn];
+    BiTNode *data[MMAXN];
     int top;
 
     SqStack() {
@@ -39,7 +43,7 @@ void initStack(SqStack Sq) {
 }
 
 bool Push(SqStack &Sq, BiTNode *el) {
-    if (Sq.top == maxn - 1)
+    if (Sq.top == MMAXN - 1)
         return false;
     Sq.data[++Sq.top] = el;
     return true;
@@ -82,11 +86,11 @@ void visit(BiTNode *T) {
 /*
 // 定义队列
 typedef struct SeQueue{
-    BiTNode *data[maxn]{};
+    BiTNode *data[MMAXN]{};
     int front, rear;
     SeQueue(){
         front = 0, rear=0;
-        for (int i = 0; i < maxn; ++i) {
+        for (int i = 0; i < MMAXN; ++i) {
             data[i] = nullptr;
         }
     }
@@ -97,7 +101,7 @@ bool isEmptySe(SeQueue Se){
     else return false;
 }
 bool isFullSe(SeQueue Se){
-    if((Se.rear+1)%maxn == Se.front)    return true;
+    if((Se.rear+1)%MMAXN == Se.front)    return true;
     else return false;
 }
 
@@ -105,30 +109,27 @@ bool isFullSe(SeQueue Se){
 void enQueue(SeQueue &Se, BiTNode *T){
     if(!isFullSe(Se)){
         Se.data[Se.rear] = T;
-        Se.rear = (Se.rear+1)%maxn;
+        Se.rear = (Se.rear+1)%MMAXN;
     }
 }
 // DeQueue
 void deQueue(SeQueue &Se, BiTNode *&T){
     if(!isEmptySe(Se)){
         T = Se.data[Se.front];
-        Se.front = (Se.front+1)%maxn;
+        Se.front = (Se.front+1)%MMAXN;
     }
 }
 // count queue
 int countQueue(SeQueue Se){
-    return (Se.rear-Se.front+maxn)%maxn;
+    return (Se.rear-Se.front+MMAXN)%MMAXN;
 }
 
 
-
+*/
 //
 // Created by 陈至宇 on 2022/3/13.
 //
 
-#ifndef ALGORITHMNOTESBUILDING_二叉树定义_H
-#define ALGORITHMNOTESBUILDING_二叉树定义_H
 
 #endif //ALGORITHMNOTESBUILDING_二叉树定义_H
 
-*/

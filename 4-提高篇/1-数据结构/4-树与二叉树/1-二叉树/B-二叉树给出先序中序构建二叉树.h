@@ -5,12 +5,12 @@ using namespace std;
 // preOrder:[preL, preR];; inOrder:[inL, inR];;
 
 // restruct
-BiTNode create_N(int preStart, int inStart, int inEnd, int *preOrder, int *inOrder) {
+/*BiTNode create_N(int preStart, int inStart, int inEnd, int *preOrder, int *inOrder) {
     BiTNode *root = (BiTNode *) malloc(sizeof(BiTNode));
     int index = 0;
     for (int i = inStart; i <= inEnd; ++i) { ;
     }
-}
+}*/
 
 /*re-construction*/
 BiTree create_H(int preL, int preR, int inL, int inR) {

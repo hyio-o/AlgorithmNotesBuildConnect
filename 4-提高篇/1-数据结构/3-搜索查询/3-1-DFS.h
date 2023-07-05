@@ -1,9 +1,9 @@
 /*背包问题：： 选入背包物品重量不超过容量，让其和最大*/
 #include <cstdio>
 
-const int maxn = 30;
+const int MMAXN = 30;
 int n, V, maxVal = 0;
-int w[maxn]{3, 5, 1, 2, 2}, c[maxn]{4, 5, 2, 1, 3};
+int w[MMAXN]{3, 5, 1, 2, 2}, c[MMAXN]{4, 5, 2, 1, 3};
 
 void DFS(int index, int sumW, int sumC) {
     printf("::index=%d---%d==maxVal---%d==sumC::\n", index, maxVal, sumC);

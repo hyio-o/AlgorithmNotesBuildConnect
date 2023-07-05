@@ -3,7 +3,7 @@
 // 然后从根结点开始每往子结点走一层，该层的货物价格将会在父亲结点的价格上增加r%。
 // 求所有叶结点中的最高价格以及这个价格的叶结点个数。
 
-vector<int> child[maxn];    // reserve tree;
+vector<int> child[MMAXN];    // reserve tree;
 double p, r;
 int n, maxDepth = 0, num = 0;   // maxDepth, num:最大深度叶结点个数
 void DFS(int index, int depth) {

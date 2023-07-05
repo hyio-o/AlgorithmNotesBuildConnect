@@ -5,7 +5,7 @@
 #define INF 10000000
 
 typedef struct {
-    int data[maxn]; // from 1 -> maxn
+    int data[maxn]; // from 1 -> MMAXN
     int length;
 } SqList;
 

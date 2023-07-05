@@ -10,7 +10,7 @@
 using namespace std;
 
 typedef int Elemtype;
-const int maxn = 1000;
+const int MMAXN = 1000;
 
 
 

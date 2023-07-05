@@ -10,7 +10,7 @@
 
 using namespace std;
 
-Elemtype preOrderL[maxn], inOrderL[maxn];
+Elemtype preOrderL[MMAXN], inOrderL[MMAXN];
 
 void scanStackT() {
     int n, el, preIndex = 0, inIndex = 0;

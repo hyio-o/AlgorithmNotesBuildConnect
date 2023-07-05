@@ -84,6 +84,27 @@ void postOrder_H(BiTNode *T) {
     }
 }
 
+
+
+vector<int> postOrder_HH(BiTNode *root)
+{
+    stack<BiTNode*> st;
+    vector<int> result;
+    if (root == NULL) return result;
+    st.push(root);
+    while (!st.empty()) {
+        BiTNode * node = st.top();
+        st.pop();
+        result.push_back(node->data);
+        visit(node);
+        if (node->lchild) st.push(node->lchild); // 相对于前序遍历，这更改一下入栈顺序 （空节点不入栈）
+        if (node->rchild) st.push(node->rchild); // 空节点不入栈
+    }
+    reverse(result.begin(), result.end()); // 将结果反转之后就是左右中的顺序了
+    return result;
+}
+
+
 //
 // Created by 陈至宇 on 2022/4/27.
 //
