@@ -1,5 +1,9 @@
 #include <cstdio>
 #include <cstdlib>
+#include <vector>
+
+using namespace std;
+
 
 #define maxn 10000
 #define INF 10000000

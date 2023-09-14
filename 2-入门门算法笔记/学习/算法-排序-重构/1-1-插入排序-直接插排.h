@@ -1,16 +1,38 @@
 #include "0-基本函数库.h"
 
+
+
 // F1
-void InsertSort(int *A, int len) {
-    for (int i = 2; i < len; ++i) {
-        int temp = A[i], j = i;
-        while (j > 1 && temp < A[j - 1]) {
-            A[j] = A[j - 1];
-            j--;
+class Solution {
+public:
+// F1 InsertSort
+    vector<int> sortArray(vector<int>& nums) {
+        int i, j, key;
+        for(i=1; i < nums.size(); i++)
+        {
+            key = nums[i];  //alies
+            j = i;
+            while(j > 0 && key < nums[j-1]){
+                swap(nums[j-1], nums[j]);
+                j--;
+            }
+            nums[j] = key;
         }
-        A[j] = temp;
+        return nums;
     }
-}
+private:
+    void swap(int &a, int &b) {
+        if (a == b) {
+            int temp = a;
+            a = b;
+            b = temp;
+        } else {
+            a = a ^ b;
+            b = a ^ b;
+            a = a ^ b;
+        }
+    }
+};
 
 // F2-折半插入排序
 void BInsertSort(SqList *L) {
