@@ -24,7 +24,63 @@ vector<int> shellSort(vector<int>& nums)
         // 缩小增量序列 log₂(gap)
         gap /= 2;
     }
+
 }
+
+void shellSort_third(vector<int>& nums)
+{
+    int length = nums.size();
+    int temp;
+    for(int step = length/2; step >= 1; step /=2){
+        for (int i = step; i < length; ++i) {
+            temp = nums[i];
+            int j = i - step;
+            while (j >=0 && nums[j] > temp)
+            {
+                nums[j+step] = nums[j];
+                j -= step;
+            }
+            nums[j+step] = temp;
+        }
+    }
+}
+
+void shellSort_fourth(int arr[], int n) {
+    int gap = n / 2;
+    while (gap > 0) {
+        for (int i = gap; i < n; i++) {
+            int temp = arr[i];
+            int j = i;
+            while (j >= gap && arr[j - gap] > temp) {
+                arr[j] = arr[j - gap];
+                j -= gap;
+            }
+            arr[j] = temp;
+        }
+        gap /= 2;
+    }
+}
+
+class solution{
+public:
+    void shellSort_fifth(vector<int>& nums)
+    {
+
+    }
+private:
+    void shellInsertionSort(vector<int>& nums, int step) {
+        int length = nums.size();
+        for (int i = step; i < length; ++i) {   // 用变量i当做步长
+            int temp = nums[i]; // temp 哨兵，比对
+            int j = i - step;
+            while (j >= 0 && nums[j] > temp) {
+                nums[j + step] = nums[j];
+                j -= step;
+            }
+            nums[j + step] = temp;
+        }
+    }
+};
 
 
 // 2. 链表式
@@ -62,6 +118,7 @@ void ShellSort(SqList *L, int dlta[], int t) {
         ShellInsert_L(L, dlta[k]);
     }
 }
+
 
 
 //
