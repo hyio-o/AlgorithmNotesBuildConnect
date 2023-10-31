@@ -1,4 +1,9 @@
 #include "0-基本函数库.h"
+
+
+
+
+
 // 1。交换 2。heapInsert 3。heapify
 
 void heapSort(SqList **L) {
@@ -8,7 +13,7 @@ void heapSort(SqList **L) {
 void heapInsert(SqList **L, int index) {
     while ((*L)->data[index] > (*L)->data[(index - 1) / 2]) // index比较index的父节点
     {
-        Swap(&(*L)->data[index], &(*L)->data[(index - 1) / 2]);
+        //mySwap((*L)->data[index], (*L)->data[(index - 1) / 2]);
         index = (index - 1) / 2;
     }
 
@@ -25,7 +30,7 @@ void heapify(SqList **L, int index, int heapSize) {
                   ? largest : index;
         if (largest == index)
             break;
-        Swap(&(*L)->data[index], &(*L)->data[(index - 1) / 2]);
+        //mySwap(&(*L)->data[index], &(*L)->data[(index - 1) / 2]);
         index = largest;
         left = index * 2 + 1;
     }
@@ -41,7 +46,7 @@ void downAdjust(SqList **L, int s, int m) {
         }
         // 若孩子权值比欲将调整的结点更大
         if ((*L)->data[j] > (*L)->data[i]) {
-            Swap(&(*L)->data[j], &(*L)->data[i]);
+            //mySwap(&(*L)->data[j], &(*L)->data[i]);
             i = j;
             j = i * 2;
         } else

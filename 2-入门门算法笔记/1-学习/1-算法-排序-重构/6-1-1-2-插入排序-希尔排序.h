@@ -1,6 +1,94 @@
 #include "0-基本函数库.h"
 
 // 1. 数组式 我就是试试233333333
+class shellSortSolution{
+public:
+    vector<int> shellSort_finalVersion(vector<int>& nums)
+    {
+        int length = nums.size();
+        int temp, index_front, index_rear;
+        for (int step = length/2; step > 0; step /= 2) {
+            for (index_rear = step; index_rear < length; index_rear++) {
+                temp = nums[index_rear];
+                index_front = index_rear - step;
+                while (index_front >=0 && nums[index_front] > temp)
+                {
+                    nums[index_front+step] = nums[index_front];
+                    index_front -= step;
+                }
+                nums[index_front+step] = temp;
+            }
+        }
+        return nums;
+    }
+    void shellSort(vector<int>& nums)
+    {
+        int length = nums.size();
+        if (length <= 1) {
+            return; // 没有需要排序的元素
+        }
+
+        for (int step = length / 2; step >= 1; step /= 2) {
+            shellInsertionSort(nums, step);
+        }
+    }
+    vector<int> shellSort_sixth(vector<int>& nums)
+    {
+        int length = nums.size();
+        int temp, index_front, index_rear;
+        for (int step = length/2; step > 0; step /= 2) {
+            for (index_rear = step; index_rear < length; index_rear++) {
+                temp = nums[index_rear];
+                index_front = index_rear - step;
+                while (index_front >=0 && nums[index_front] > temp)
+                {
+                    nums[index_front+step] = nums[index_front];
+                    index_front -= step;
+                }
+                nums[index_front+step] = temp;
+            }
+        }
+        return nums;
+    }
+
+    vector<int> shellSort_replaseV(vector<int>& nums)
+    {
+        // int A[8] = { 8, 3, 5, 1, 4, 2, 7, 6 };
+        //              0, 1, 2, 3, 4, 5, 6, 7
+        int length = nums.size();
+        int i, j, temp;
+        for (int step = length/2 ; step > 0 ; step /= 2)    // step: 4->2->1-》
+        {
+            for (i = step; i < length; ++i) // i:4、5、6、7->2、3、4、5、6、7->1、2、3、4、5、6、7-》
+            {
+                temp = nums[i]; // temp:4、2、7、6->5、1、4、2、7、6->8、3、5、1、4、2、7、6-》
+                j = i - step;   // j: 0、1、2、3->0、1、2、3、4、5->0、1、2、3、4、5、6-》
+                // 首次的 j+step = i ， 其后的j+step =
+                while (j >= 0 && nums[j] > step)
+                {
+                    nums[j + step] = nums[j];
+                    j -= step;
+                }
+                nums[j + step] = temp;
+            }
+        }
+        return nums;
+    }
+private:
+    void shellInsertionSort(vector<int>& nums, int step) {
+        int length = nums.size();
+        for (int i = step; i < length; ++i) {
+            int temp = nums[i];
+            int j = i - step;
+            while (j >= 0 && nums[j] > temp) {
+                nums[j + step] = nums[j];
+                j -= step;
+            }
+            nums[j + step] = temp;
+        }
+    }
+
+};
 vector<int> shellSort(vector<int>& nums)
 {
     int i, j, temp;
@@ -24,7 +112,7 @@ vector<int> shellSort(vector<int>& nums)
         // 缩小增量序列 log₂(gap)
         gap /= 2;
     }
-
+    return nums;
 }
 
 void shellSort_third(vector<int>& nums)

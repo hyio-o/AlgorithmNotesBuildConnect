@@ -1,4 +1,5 @@
-#include "../A-二叉树定义.h"
+#include "../../../0-初始化定义/4-二叉树定义.h"
+#include "../../../0-初始化定义/3-队列定义.h"
 
 /*法一： 递归思想*/
 BiTree invertBTree_N(BiTNode *&root) {

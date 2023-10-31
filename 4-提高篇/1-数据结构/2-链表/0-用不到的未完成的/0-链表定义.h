@@ -24,6 +24,11 @@ public:
     };
 };
 
+struct ListNode{
+    Elemtype val;
+    ListNode *next;
+}* LinkList;
+
 
 //
 // Created by 陈至宇 on 2022/9/23.

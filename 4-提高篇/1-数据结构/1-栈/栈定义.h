@@ -1,3 +1,4 @@
+/*
 #include <iostream>
 #include <cstdio>
 #include <string>
@@ -6,8 +7,10 @@
 #include <map>
 
 // 1清空 2size 3empty 4push 5pop 6top
+*/
 /*1 链栈
- * 2 数组栈 == 顺序栈*/
+ * 2 数组栈 == 顺序栈*//*
+
 #define MAXSIZE 210
 typedef char ELemType;
 typedef struct SqStack {
@@ -57,7 +60,9 @@ bool isEmptySq(SqStack Sq) {
 }
 
 
-/* 链栈定义 */
+*/
+/* 链栈定义 *//*
+
 
 
 
@@ -69,3 +74,4 @@ bool isEmptySq(SqStack Sq) {
 #define ALGORITHMNOTESBUILDING_栈应用_H
 
 #endif //ALGORITHMNOTESBUILDING_栈应用_H
+*/

@@ -1,4 +1,4 @@
-#include "../1-栈/栈定义.h"
+#include "../../1-栈/栈定义.h"
 
 /*
 typedef struct linkList {
