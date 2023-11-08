@@ -1,6 +1,6 @@
 #include "../../0-初始化定义/2-链表定义.h"
 
-// 创建链表 递归
+// 创建链表 递归 尾插
 
 void createLinkList(LinkList &L, int n){
     if(n == 0) return;

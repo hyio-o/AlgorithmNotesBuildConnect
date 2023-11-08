@@ -11,21 +11,23 @@ selectSort_LinkList(L->next);：递归调用选择排序函数，对链表的剩
 通过以上步骤，你可以将最小值节点Lindex插入到链表头部，并继续对链表进行选择排序操作。
 如果你还有其他问题，请随时提问！*/
 void selectSort_LinkList(LinkList &L){
+    // 创建一个指向头节点的指针p和一个指向当前最小节点前一个节点的指针q
     LinkList Lindex = L;
     LinkList temp = L;
     if(L->next != NULL){    // 本次（递归）链表非空
-        while (Lindex->next != NULL){    // 找到最小/大值,并让指针下标给rear
+        while (Lindex->next != NULL){    // 找到最小/大值,并让指针下标给temp
             if(Lindex->next->data < temp->next->data){
-                temp = Lindex;
+                temp = Lindex;           // 不断将最值赋予 temp
             }
-            Lindex = Lindex->next;
-        }   // 本轮最小值找到，下标给rear了。
-        Lindex = temp->next; // temp 马上升迁去固定位置，所以rear的后续交给front，
+            Lindex = Lindex->next;  // 等价于 Lindex++
+        }   // 本轮最小值(temp.next)找到，下标给temp了。
+        Lindex = temp->next; // 交给Lindex, 就是最值
         // 将temp节点的下一个节点赋值给Lindex，即Lindex指向最小值节点
 
-        // 那么rear的后续的后续
-        temp->next = temp->next->next;  //
-        Lindex->next = L->next;
+        // 那么temp的后续的后续
+        temp->next = temp->next->next;  // (temp.next)是最小值，因此移掉(temp.next)；
+        // 等价 Lindex = Lindex->next;
+        Lindex->next = L->next; // 是原来的 temp->next->next,最值的后边； 头插法，插中间；
         L->next = Lindex;
         selectSort_LinkList(L->next);
     }
