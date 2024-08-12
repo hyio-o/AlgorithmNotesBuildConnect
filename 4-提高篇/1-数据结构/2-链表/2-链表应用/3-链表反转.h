@@ -2,6 +2,49 @@
 
 class solution{
 public:
+	// 双指针
+	ListNode* reverseList_evo(ListNode *head)
+	{
+		ListNode *temp; // 保存cur的下一个节点
+		ListNode *cur = head;   //
+		ListNode *pre = NULL;   //
+		while(cur != NULL)
+		{
+			temp = cur->next;   // 保存一下 cur 下一节点，因为要改变 cur->next;
+			cur->next = pre;    // 工作指针，指向翻转中
+			// 更新 pre 、 cur
+			pre = cur;
+			cur = temp;
+		}
+		return pre;
+	}
+
+	// 递归
+	ListNode* reverse_func(ListNode *pre, ListNode *cur)
+	{
+		if(cur == NULL) return pre;
+		ListNode *temp = cur->next;
+		cur->next = pre;
+	}
+	ListNode *reverse_recursion(ListNode *head){
+		return reverse_func(NULL, head);
+	}
+	//end
+
+    LinkList reverseList_third(LinkList head){
+        ListNode *pre, *cur;
+        pre = head->next;
+        head->next = NULL;
+
+        while(pre != NULL){
+            cur = pre;
+            pre = pre->next;
+
+            cur->next = head->next;
+            head->next = pre;
+        }
+        return head;
+    }
     // 双指针， indexr->next = pre;  pre = indexr; indexr++;
     LinkList reverseList_second(LinkList head){
         LinkList prev = NULL, tempFORnext;
@@ -12,7 +55,7 @@ public:
             prev = indexr;  // 前指针后移                         重点
             indexr= tempFORnext;   // 当前指针后移
         }
-
+        return head;
     }
     // 双指针
     LinkList reverseList_first(LinkList head){

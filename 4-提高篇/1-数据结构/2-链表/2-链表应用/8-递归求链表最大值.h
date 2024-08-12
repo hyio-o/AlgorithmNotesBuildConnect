@@ -1,11 +1,13 @@
+#include "../../0-初始化定义/2-链表定义.h"
 #include <iostream>
 using namespace std;
 
-struct ListNode {
+/*struct ListNode {
     int val;
     ListNode *next;
     ListNode(int x) : val(x), next(NULL) {}
 };
+*/
 
 int findMax(ListNode* head) {
     if (head == NULL) {
@@ -15,7 +17,7 @@ int findMax(ListNode* head) {
     return max(maxVal, head->val);
 }
 
-int main() {
+int SearchMax() {
     ListNode* head = new ListNode(1);
     head->next = new ListNode(2);
     head->next->next = new ListNode(3);

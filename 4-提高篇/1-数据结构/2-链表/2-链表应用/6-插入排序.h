@@ -1,12 +1,14 @@
-//#include "../../0-初始化定义/2-链表定义.h"
+#include "../../0-初始化定义/2-链表定义.h"
 #include<iostream>
 using namespace std;
 
+/*
 struct ListNode {
     int val;
     ListNode *next;
     ListNode(int x) : val(x), next(NULL) {}
 };
+*/
 
 ListNode* insert(ListNode* head, int val) {
     ListNode* newNode = new ListNode(val);

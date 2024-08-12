@@ -1,13 +1,13 @@
 // 谁小谁移动，相等的打印；打印之后共同移动
-
+#include "../../0-初始化定义/2-链表定义.h"
 #include <iostream>
 using namespace std;
 
-struct ListNode {
+/*struct ListNode {
     int val;
     ListNode *next;
     ListNode(int x) : val(x), next(NULL) {}
-};
+};*/
 
 void printCommon(ListNode *head1, ListNode *head2) {
     if (!head1 || !head2) return;

@@ -6,7 +6,7 @@
 所有左子树和右子树自身必须也是二叉搜索树。 * */
 
 // 递归： 中序遍历下单纯判断序列是否是增序； 但是在递归中比较难实现，因此增加一个数组存放中序序列
-class recursion_Solu {
+class recursion_Solu{
 private:
     vector<int> squ;    // vector<int> &etc ??? 这是啥意思
     void traversal(BiTNode *root) {

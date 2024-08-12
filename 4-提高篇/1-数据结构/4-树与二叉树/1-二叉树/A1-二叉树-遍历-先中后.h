@@ -1,4 +1,5 @@
-#include "A-二叉树定义.h"
+#include "../../0-初始化定义/4-二叉树定义.h"
+
 //#include "/Users/chenzhiyu/CLionProjects/
 // AlgorithmNotesBuilding/4-提高篇/1-数据结构/1-栈/栈定义.h"
 

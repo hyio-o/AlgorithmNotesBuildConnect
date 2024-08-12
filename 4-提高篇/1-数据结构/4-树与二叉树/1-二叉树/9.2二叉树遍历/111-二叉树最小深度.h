@@ -1,6 +1,7 @@
 //最小深度是从根节点到最近叶子节点的最短路径上的节点数量。
 
-#include "../A-二叉树定义.h"
+#include "../././A-二叉树定义.h"
+#include "../../../0-初始化定义/4-二叉树定义.h"
 
 int minDepth(BiTNode *root) {
     if (!root) return 0;

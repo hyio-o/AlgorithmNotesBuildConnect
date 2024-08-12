@@ -6,8 +6,9 @@ typedef int element;    //定义元素
 typedef int ElemType;   //
 //定义结点类型
 typedef struct ListNode{
-    ElemType data;
-    struct ListNode *next;
+	int val;
+	ListNode *next;
+	ListNode(int x) : val(x), next(NULL) {}
 }*LinkList; //listNode： 结点的类型。*LinkedList指向结点的 指针类型
 
 //单链表初始化
@@ -19,6 +20,117 @@ LinkList initList(){
     L->next = NULL;
 }   //需要养成创建是否失败的认证的习惯；（一旦失败后果不堪设想）
 
+// 重构
+//
+// 单链表 定义
+struct ListNode_Re {
+	int val;  // 节点上存储的元素
+	ListNode_Re *next;  // 指向下一个节点的指针
+	ListNode_Re(int x) : val(x), next(NULL) {}  // 节点的构造函数
+	// 	所以如果不定义构造函数使用默认构造函数的话，在初始化的时候就不能直接给变量赋值！
+};
+// 双链表
+struct DoublyLinkList_Re {
+	int val;
+	DoublyLinkList_Re *rear;
+	DoublyLinkList_Re *front;
+	DoublyLinkList_Re(int x): val(x), rear(NULL), front(NULL) {}    // 节点内构造函数
+
+};
+// 循环链表 -苟同 双链表，且首尾相连
+struct CircularLinkList_Re {
+	int val;
+	CircularLinkList_Re *rear;
+	CircularLinkList_Re *front;
+	CircularLinkList_Re(int x): val(x), rear(NULL), front(NULL) {}
+};
+
+// 原链表删除操作 不带头结点需要区分 删 头节点 否
+class ListNodeSolution{
+public:
+	ListNode_Re *removeElements_NoHead(ListNode_Re *head, int val)     // 根据值 删除链表结点
+	{
+		// 删的是头结点 ：只要将头结点向后移动一位就可以
+		while(head != NULL && head->val == val){    // 为什么不是 if：
+			ListNode_Re *temp = head;
+			head = head->next;
+			delete temp;
+		}
+		// 删 非 头结点
+		ListNode_Re *cur = head;
+		while(cur != NULL && cur->next != NULL){
+			if(cur->next->val == val){      // 使用 cur 表示 删除节点cur.next 的前一个结点 ，后移一位表示删除
+				ListNode_Re *temp = cur->next;  // 待释放/删除 结点
+				cur->next = cur->next->next;
+				delete temp;
+			}
+			else{
+				cur = cur->next;    // cur结点不为空 且 cur.next结点不为空 ，然而cur.next.val 不等于 val；即
+				//  cur 指针 链表结点向后移动
+			}
+		}
+	}
+	ListNode_Re *removeElements_Head(ListNode_Re *head, int val)
+	{
+		ListNode_Re *dummyHead = new ListNode_Re(0); // 设置一虚拟头结点
+		dummyHead->next = head;         // 将 头结点 指向 虚拟头结点， 方便后续操作
+		ListNode_Re *cur = dummyHead;
+		while(cur->next != NULL)
+		{
+			if(cur->next->val == val){
+				ListNode_Re *temp = cur->next;
+				cur->next = cur->next->next;
+				delete temp;
+			}else{
+				cur = cur->next;
+			}
+		}
+		// 虚拟头结点 进行回收 销毁 返回 head 头结点
+		head = dummyHead->next;
+		delete dummyHead;
+		return head;
+	}
+};
+
+
+// 707.设计链表
+//get(index)：获取链表中第 index 个节点的值。如果索引无效，则返回-1。
+class DesignLinkList707LC{
+private:
+	// 定义 链表数据结构
+	struct LinkedNode{
+		ElemType val;
+		int ListLength = 0;
+		LinkedNode *next;
+		LinkedNode(int val):val(val), next(nullptr){}
+	};
+public:
+	// 1. init LinkList
+	LinkedNode * initLinkList(){
+		LinkedNode *dummyHead = (LinkedNode *)malloc(sizeof(LinkedNode));
+		dummyHead->next = NULL;
+		return dummyHead;
+	}
+	ElemType yourGetElemIndex(LinkedNode *obj, int index){
+		LinkedNode *cur = obj->next;    // 解头结点
+		for (int i = 0; cur != NULL; ++i) {
+			if(i == index){
+				return cur->val;
+			}else{
+				cur = cur->next;
+			}
+		}
+		return -1;
+	}
+};
+//addAtHead(val)：在链表的第一个元素之前添加一个值为 val 的节点。插入后，新节点将成为链表的第一个节点。
+//addAtTail(val)：将值为 val 的节点追加到链表的最后一个元素。
+//addAtIndex(index,val)：在链表中的第 index 个节点之前添加值为 val  的节点。如果 index 等于链表的长度，
+// 则该节点将附加到链表的末尾。如果 index 大于链表长度，则不会插入节点。如果index小于0，则在头部插入节点。
+//deleteAtIndex(index)：如果索引 index 有效，则删除链表中的第 index 个节点。
+
+
+
 // 创建单链表-头插
 
 
@@ -27,7 +139,7 @@ LinkList initList(){
 
 
 
-class solutionNode{
+class SsolutionNode{
 public:
 
 

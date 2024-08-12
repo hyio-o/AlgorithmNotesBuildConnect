@@ -1,4 +1,4 @@
-#include "../1-数组定义.h"
+#include "../x1-数组定义.h"
 // 1. force
 class Sol_2{
 public:

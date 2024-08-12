@@ -24,10 +24,10 @@ public:
     };
 };
 
-struct ListNode{
-    Elemtype val;
-    ListNode *next;
-}* LinkList;
+//struct ListNode{
+//    Elemtype val;
+//    ListNode *next;
+//}* LinkList;
 
 
 //
