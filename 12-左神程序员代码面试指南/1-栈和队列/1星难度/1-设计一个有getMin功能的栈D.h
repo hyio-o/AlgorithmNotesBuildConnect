@@ -1,4 +1,4 @@
-#include "../1-结构化定义/0-基础函数库集合.h"
+#include "../../1-结构化定义/0-基础函数库集合.h"
 // 实现栈的基本功能、返回栈中最小元素的操作
 // pop push getMin 时间复杂度设置 O(1)
 using namespace std;

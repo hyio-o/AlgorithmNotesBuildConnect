@@ -14,7 +14,7 @@
 // Created by 陈至宇 on 2024/7/14.
 //
 
-#ifndef ALGORITHMNOTESBUILDING_3_生成窗口最大值数组_H
-#define ALGORITHMNOTESBUILDING_3_生成窗口最大值数组_H
+#ifndef ALGORITHMNOTESBUILDING_3_生成窗口最大值数组Q_H
+#define ALGORITHMNOTESBUILDING_3_生成窗口最大值数组Q_H
 
-#endif //ALGORITHMNOTESBUILDING_3_生成窗口最大值数组_H
+#endif //ALGORITHMNOTESBUILDING_3_生成窗口最大值数组Q_H
