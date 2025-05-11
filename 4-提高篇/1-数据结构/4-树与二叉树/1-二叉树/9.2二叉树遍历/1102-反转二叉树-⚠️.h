@@ -18,7 +18,7 @@ BiTree invertBTree_N(BiTNode *&root) {
 /*法三： 静态转置*/
 // 队列 - 迭代法 -- 层序
 BiTree invertBTree_Se(BiTNode *&root) {
-    SeQueue Se;
+    DMSeQueue Se;
 
     if (root)
         enQueue(Se, root);

@@ -11,7 +11,7 @@ typedef struct DMListNode{
 }*LinkList; //listNode： 结点的类型。*LinkedList指向结点的 指针类型
 
 //单链表初始化
-LinkList initList(){
+LinkList ZSinitList(){
 	DMListNode *L;
     L = (DMListNode*)malloc(sizeof(DMListNode));
     if(!L)

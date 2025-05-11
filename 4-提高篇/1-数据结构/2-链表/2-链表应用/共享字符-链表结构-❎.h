@@ -23,7 +23,7 @@ void sharing_linklist() {
     }
     int p;
     for (int p = s1; p != -1; p = node[p].next) {
-        // TODO 共享字符串， 链表设计何如？ 涉及字符串匹配
+        // 共享字符串， 链表设计何如？ 涉及字符串匹配
     }
 
 }

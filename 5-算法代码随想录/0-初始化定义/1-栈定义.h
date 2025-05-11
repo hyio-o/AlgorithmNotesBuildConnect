@@ -6,8 +6,11 @@
 #include <map>
 
 // 1清空 2size 3empty 4push 5pop 6top
-/*1 链栈
- * 2 数组栈 == 顺序栈*/
+/*
+ * 1 数组栈 == 顺序栈
+ * 2 链栈
+ * */
+
 #define MAXSIZE 210
 typedef char ELemType;
 typedef struct DMSeqStack {

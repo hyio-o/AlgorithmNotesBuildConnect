@@ -23,7 +23,7 @@ private:
         int minIndex, temp;
         for (int i = 0; i < len - 1; ++i) {
             minIndex = i;
-            for (int j = i + 1; j < len; ++j) {   // 找最小 TODO 测试选择排序 i j的执行范围
+            for (int j = i + 1; j < len; ++j) {   // 找最小 测试选择排序 i j的执行范围
                 if (L->data[j] < L->data[minIndex])
                     minIndex = j;
             }

@@ -87,42 +87,42 @@ void visit(BiTNode *T) {
 */
 /*
 // 定义队列
-typedef struct SeQueue{
+typedef struct DMSeQueue{
     BiTNode *data[MMAXN]{};
     int front, rear;
-    SeQueue(){
+    DMSeQueue(){
         front = 0, rear=0;
         for (int i = 0; i < MMAXN; ++i) {
             data[i] = nullptr;
         }
     }
-}SeQueue;
+}DMSeQueue;
 
-bool isEmptySe(SeQueue Se){
+bool isEmptySe(DMSeQueue Se){
     if(Se.front == Se.rear) return true;
     else return false;
 }
-bool isFullSe(SeQueue Se){
+bool isFullSe(DMSeQueue Se){
     if((Se.rear+1)%MMAXN == Se.front)    return true;
     else return false;
 }
 
 // EnQueue
-void enQueue(SeQueue &Se, BiTNode *T){
+void enQueue(DMSeQueue &Se, BiTNode *T){
     if(!isFullSe(Se)){
         Se.data[Se.rear] = T;
         Se.rear = (Se.rear+1)%MMAXN;
     }
 }
 // DeQueue
-void deQueue(SeQueue &Se, BiTNode *&T){
+void deQueue(DMSeQueue &Se, BiTNode *&T){
     if(!isEmptySe(Se)){
         T = Se.data[Se.front];
         Se.front = (Se.front+1)%MMAXN;
     }
 }
 // count queue
-int countQueue(SeQueue Se){
+int countQueue(DMSeQueue Se){
     return (Se.rear-Se.front+MMAXN)%MMAXN;
 }
 

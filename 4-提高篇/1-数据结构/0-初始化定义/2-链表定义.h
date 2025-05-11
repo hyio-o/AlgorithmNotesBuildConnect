@@ -12,7 +12,7 @@ typedef struct ListNode{
 }*LinkList; //listNode： 结点的类型。*LinkedList指向结点的 指针类型
 
 //单链表初始化
-LinkList initList(){
+LinkList ZSinitList(){
     ListNode *L;
     L = (ListNode*)malloc(sizeof(ListNode));
     if(!L)

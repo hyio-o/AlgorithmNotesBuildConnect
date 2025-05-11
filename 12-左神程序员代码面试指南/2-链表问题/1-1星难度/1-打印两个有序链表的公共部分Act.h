@@ -1,4 +1,4 @@
-#include "../../0-结构化定义/1-链表定义.h"
+#include "../../0-结构化定义/1_linkListDefine.h"
 // 有序因此可以 判断 head1 head2 的比较
 // 比对
 // 如果head1 < head2 , head1 往后走
@@ -8,8 +8,8 @@
 class solution{
 private:
 	int myVal;
-	ZListNode *myNode;
-	ZListNode *cur;
+	ZSlistNode *myNode;
+	ZSlistNode *cur;
 public:
 
 

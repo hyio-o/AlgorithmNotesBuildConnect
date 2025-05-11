@@ -20,7 +20,7 @@ struct stu {
 bool cmp(stu a, stu b) {
     if (a.score != b.score) return a.score > b.score;
     else return strcmp(a.id, b.id) < 0;   // str compare, len(a) - len(b);
-    //TODO 此 return 意味着：
+    //此 return 意味着：
 }
 
 //

@@ -11,7 +11,7 @@ struct StaLinkNode {
 
 bool cmp(StaLinkNode x, StaLinkNode y) {
     if (!x.flag || !y.flag) {    //若有一个为false， 即不在链表中
-        return x.flag > y.flag; //TODO 只要x和y有一个无效，就把它放到后面去
+        return x.flag > y.flag; // 只要x和y有一个无效，就把它放到后面去
     } else
         return x.data < y.data; // 不是bool结构吗？返回 data可是int结构？？？
 }

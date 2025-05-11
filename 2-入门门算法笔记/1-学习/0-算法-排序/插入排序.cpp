@@ -12,7 +12,7 @@ void InsertSort(int *A, int length) //
     for (int i = 2; i < length; ++i) {
         int temp = A[i], j = i;
         while (j > 1 && temp < A[j - 1]) {
-            // TODO 插入排序 算法思想::向前移动，
+            //  插入排序 算法思想::向前移动，
             //  每当判断后面的值temp=A【i】比A【j-1】，j=i先；更大小时，则进行置换
             A[j] = A[j - 1];
             j--;
